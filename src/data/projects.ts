@@ -16,7 +16,7 @@ export const projects: Project[] = [
       "Role-based dashboards for profile management, orders, and order fulfillment.",
     ],
     tags: ["React.js", "Redux", "Material UI", "TypeScript", "Node.js", "Mongoose", "MongoDB", "JWT"],
-    links: { live: "#", client: "#", server: "#" },
+    links: { live: "https://a4-bike-shop-client.vercel.app/", client: "https://github.com/alamin-cse44/a4-bike-shop-client", server: "https://github.com/alamin-cse44/a4-bike-shop-server" },
   },
   {
     title: "House Renting",
@@ -27,7 +27,7 @@ export const projects: Project[] = [
       "Role-based dashboards with middleware-secured user profile management.",
     ],
     tags: ["Next.js", "Shadcn UI", "TypeScript", "Node.js", "Express.js", "Mongoose", "MongoDB", "JWT"],
-    links: { live: "#", client: "#", server: "#" },
+    links: { live: "https://house-renting-nine.vercel.app/", client: "https://github.com/alamin-cse44/house-renting-client", server: "https://github.com/alamin-cse44/house-renting-server" },
   },
   {
     title: "Chickin Worx",
@@ -38,6 +38,6 @@ export const projects: Project[] = [
       "Authenticated accounts with real-time cart state throughout the ordering flow.",
     ],
     tags: ["React.js", "Node.js", "MongoDB", "Authentication"],
-    links: { live: "#" },
+    links: { live: "https://order.chickinworx.com/en" },
   },
 ];

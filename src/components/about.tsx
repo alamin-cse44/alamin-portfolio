@@ -24,7 +24,7 @@ export function About() {
             <div className="relative rounded-2xl overflow-hidden border border-border aspect-[4/5] bg-gradient-to-br from-surface-2 to-bg-soft">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/profile.jpg"
+                src="/icons/panjabi_pic.png"
                 alt="Al Amin"
                 className="w-full h-full object-cover"
                 onError={(e) => {

@@ -23,18 +23,11 @@ export function Contact() {
             </a>
           </div>
           <div className="mt-10 flex justify-center gap-6 font-mono text-sm text-muted">
-            <a
-              href="https://rehan-alamin-portfolio.netlify.app/"
-              target="_blank"
-              rel="noopener"
-              className="hover:text-ink"
-            >
-              portfolio ↗
-            </a>
-            <a href="#" target="_blank" rel="noopener" className="hover:text-ink">
+            
+            <a href="https://github.com/alamin-cse44" target="_blank" rel="noopener" className="hover:text-ink">
               github ↗
             </a>
-            <a href="#" target="_blank" rel="noopener" className="hover:text-ink">
+            <a href="https://www.linkedin.com/in/al-amin-uap-cse44/" target="_blank" rel="noopener" className="hover:text-ink">
               linkedin ↗
             </a>
           </div>
