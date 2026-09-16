@@ -1,6 +1,7 @@
 export type Project = {
   title: string;
   description: string;
+  image?: string;
   points?: string[];
   tags: string[];
   links?: { live?: string; client?: string; server?: string };
@@ -15,8 +16,22 @@ export const projects: Project[] = [
       "Product search plus category and brand filtering, cart, and a full payment workflow.",
       "Role-based dashboards for profile management, orders, and order fulfillment.",
     ],
-    tags: ["React.js", "Redux", "Material UI", "TypeScript", "Node.js", "Mongoose", "MongoDB", "JWT"],
-    links: { live: "https://a4-bike-shop-client.vercel.app/", client: "https://github.com/alamin-cse44/a4-bike-shop-client", server: "https://github.com/alamin-cse44/a4-bike-shop-server" },
+    tags: [
+      "React.js",
+      "Redux",
+      "Material UI",
+      "TypeScript",
+      "Node.js",
+      "Mongoose",
+      "MongoDB",
+      "JWT",
+    ],
+    links: {
+      live: "https://a4-bike-shop-client.vercel.app/",
+      client: "https://github.com/alamin-cse44/a4-bike-shop-client",
+      server: "https://github.com/alamin-cse44/a4-bike-shop-server",
+    },
+    image: "/images/projects/bike-shop.png",
   },
   {
     title: "House Renting",
@@ -26,8 +41,22 @@ export const projects: Project[] = [
       "Multi-image property listings, booking flow, and integrated payments with dynamic filtering.",
       "Role-based dashboards with middleware-secured user profile management.",
     ],
-    tags: ["Next.js", "Shadcn UI", "TypeScript", "Node.js", "Express.js", "Mongoose", "MongoDB", "JWT"],
-    links: { live: "https://house-renting-nine.vercel.app/", client: "https://github.com/alamin-cse44/house-renting-client", server: "https://github.com/alamin-cse44/house-renting-server" },
+    tags: [
+      "Next.js",
+      "Shadcn UI",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Mongoose",
+      "MongoDB",
+      "JWT",
+    ],
+    links: {
+      live: "https://house-renting-nine.vercel.app/",
+      client: "https://github.com/alamin-cse44/house-renting-client",
+      server: "https://github.com/alamin-cse44/house-renting-server",
+    },
+    image: "/images/projects/house-renting.png",
   },
   {
     title: "Chickin Worx",
@@ -39,5 +68,6 @@ export const projects: Project[] = [
     ],
     tags: ["React.js", "Node.js", "MongoDB", "Authentication"],
     links: { live: "https://order.chickinworx.com/en" },
+    image: "/images/projects/chickin-worx.png",
   },
 ];

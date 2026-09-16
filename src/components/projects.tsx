@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { projects } from "@/data/projects";
@@ -96,29 +97,41 @@ export function Projects() {
               </div>
 
               <div
-                className="relative border-t md:border-t-0 md:border-l border-border-soft min-h-[220px] flex items-center justify-center p-8"
+                className="relative border-t md:border-t-0 md:border-l border-border-soft min-h-[320px] md:min-h-[420px] flex items-center justify-center p-4 md:p-6"
                 style={{
                   background:
                     "radial-gradient(circle at 30% 20%, rgba(124,158,255,0.10), transparent 60%), radial-gradient(circle at 80% 80%, rgba(242,169,59,0.10), transparent 55%)",
                 }}
               >
-                <div className="absolute inset-0 flex items-center justify-center p-8">
-                  <div className="w-full max-w-[280px]">
-                    <div className="rounded-t-xl border border-border-soft bg-surface-2 flex items-center gap-1.5 px-3 py-2.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#3A4058]" />
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#3A4058]" />
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#3A4058]" />
-                    </div>
-                    <div className="rounded-b-xl border border-t-0 border-border-soft bg-surface p-4 space-y-2">
-                      <div className="h-3 w-2/3 rounded bg-surface-2" />
-                      <div className="h-16 rounded bg-surface-2" />
-                      <div className="flex gap-2">
-                        <div className="h-8 w-8 rounded bg-surface-2" />
-                        <div className="h-8 flex-1 rounded bg-surface-2" />
+                {p.image ? (
+                  <div className="relative w-full h-full min-h-[280px] md:min-h-[380px] overflow-hidden rounded-xl border border-border-soft bg-surface-2">
+                    <Image
+                      src={p.image}
+                      alt={`${p.title} project preview`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-contain"
+                    />
+                  </div>
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center p-8">
+                    <div className="w-full max-w-[280px]">
+                      <div className="rounded-t-xl border border-border-soft bg-surface-2 flex items-center gap-1.5 px-3 py-2.5">
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#3A4058]" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#3A4058]" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#3A4058]" />
+                      </div>
+                      <div className="rounded-b-xl border border-t-0 border-border-soft bg-surface p-4 space-y-2">
+                        <div className="h-3 w-2/3 rounded bg-surface-2" />
+                        <div className="h-16 rounded bg-surface-2" />
+                        <div className="flex gap-2">
+                          <div className="h-8 w-8 rounded bg-surface-2" />
+                          <div className="h-8 flex-1 rounded bg-surface-2" />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           ))}
