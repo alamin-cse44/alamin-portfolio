@@ -1,8 +1,13 @@
 "use client";
 
+import Image from "next/image";
+
 export function About() {
   return (
-    <section id="about" className="relative z-10 py-24 md:py-32 border-t border-border-soft">
+    <section
+      id="about"
+      className="relative z-10 py-24 md:py-32 border-t border-border-soft"
+    >
       <div className="mx-auto max-w-6xl px-6 md:px-12 grid md:grid-cols-[0.85fr_1.3fr] gap-14">
         <div>
           <p className="font-mono text-sm text-faint mb-4">
@@ -19,24 +24,29 @@ export function About() {
           <div className="relative w-full max-w-[280px]">
             <div
               className="absolute -inset-3 rounded-[22px] border border-border-soft"
-              style={{ background: "linear-gradient(160deg, rgba(242,169,59,0.10), transparent 60%)" }}
+              style={{
+                background:
+                  "linear-gradient(160deg, rgba(242,169,59,0.10), transparent 60%)",
+              }}
             />
             <div className="relative rounded-2xl overflow-hidden border border-border aspect-[4/5] bg-gradient-to-br from-surface-2 to-bg-soft">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="/icons/panjabi_pic.png"
                 alt="Al Amin"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 280px"
+                className="object-cover"
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
-                  const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
+                  const fallback = e.currentTarget
+                    .nextElementSibling as HTMLElement | null;
                   if (fallback) fallback.style.display = "flex";
                 }}
               />
-              <div
-                className="w-full h-full flex-col items-center justify-center gap-3 text-center px-6 hidden absolute inset-0"
-              >
-                <span className="font-display text-4xl font-semibold text-accent">AA</span>
+              <div className="w-full h-full flex-col items-center justify-center gap-3 text-center px-6 hidden absolute inset-0">
+                <span className="font-display text-4xl font-semibold text-accent">
+                  AA
+                </span>
                 <span className="font-mono text-[11px] text-faint leading-relaxed mt-2">
                   add /public/profile.jpg
                 </span>
@@ -50,19 +60,21 @@ export function About() {
 
         <div className="space-y-6 text-muted leading-relaxed">
           <p>
-            I specialize in JavaScript and TypeScript across the stack — Node.js and Express on the
-            backend, React and Next.js on the front. I like projects where I own a feature end to
-            end: schema design, API, and the interface someone actually clicks through.
+            I specialize in JavaScript and TypeScript across the stack — Node.js
+            and Express on the backend, React and Next.js on the front. I like
+            projects where I own a feature end to end: schema design, API, and
+            the interface someone actually clicks through.
           </p>
           <p>
-            At MAR Group I work on production apps used by real customers, where I&apos;ve upgraded
-            the Node runtime across the fleet, tightened the gap between development and production
-            environments, and pushed for architecture that scales rather than just ships.
+            At MAR Group I work on production apps used by real customers, where
+            I&apos;ve upgraded the Node runtime across the fleet, tightened the
+            gap between development and production environments, and pushed for
+            architecture that scales rather than just ships.
           </p>
           <p>
-            Outside of work I keep my problem-solving sharp on Codeforces, CodeChef, LeetCode and
-            AtCoder, and I hold a CS degree from the University of Asia Pacific with three
-            Dean&apos;s List terms.
+            Outside of work I keep my problem-solving sharp on Codeforces,
+            CodeChef, LeetCode and AtCoder, and I hold a CS degree from the
+            University of Asia Pacific with three Dean&apos;s List terms.
           </p>
           <div className="grid grid-cols-2 gap-4 pt-4">
             <div className="rounded-[14px] border border-border-soft bg-gradient-to-b from-surface to-bg-soft p-4">

@@ -1,10 +1,14 @@
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 
 export function Projects() {
   return (
-    <section id="projects" className="relative z-10 py-24 md:py-32 border-t border-border-soft">
+    <section
+      id="projects"
+      className="relative z-10 py-24 md:py-32 border-t border-border-soft"
+    >
       <div className="mx-auto max-w-6xl px-6 md:px-12">
         <p className="font-mono text-sm text-faint mb-4">
           <span className="text-accent2">./projects</span>
@@ -13,7 +17,8 @@ export function Projects() {
           Featured projects
         </h2>
         <p className="text-muted max-w-lg mb-14">
-          Personal builds where I designed the data model, the API, and the interface.
+          Personal builds where I designed the data model, the API, and the
+          interface.
         </p>
 
         <div className="grid gap-8">
@@ -23,9 +28,15 @@ export function Projects() {
               className="rounded-[14px] border border-border-soft bg-gradient-to-b from-surface to-bg-soft grid md:grid-cols-[1.1fr_1fr] overflow-hidden transition-transform hover:-translate-y-1"
             >
               <div className="p-8 md:p-10 flex flex-col justify-center">
-                <p className="font-mono text-xs text-faint mb-2">0{idx + 1} / featured</p>
-                <h3 className="font-display text-2xl md:text-3xl font-semibold">{p.title}</h3>
-                <p className="text-muted mt-4 leading-relaxed">{p.description}</p>
+                <p className="font-mono text-xs text-faint mb-2">
+                  0{idx + 1} / featured
+                </p>
+                <h3 className="font-display text-2xl md:text-3xl font-semibold">
+                  {p.title}
+                </h3>
+                <p className="text-muted mt-4 leading-relaxed">
+                  {p.description}
+                </p>
                 {p.points && (
                   <ul className="mt-4 space-y-2 text-sm text-muted">
                     {p.points.map((pt, i) => (
@@ -43,19 +54,43 @@ export function Projects() {
                 </div>
                 <div className="flex flex-wrap gap-3 mt-7">
                   {p.links?.live && (
-                    <a href={p.links.live} target="_blank" rel="noopener" className={buttonVariants({ variant: "outline", size: "sm" })}>
+                    <Link
+                      href={p.links.live}
+                      target="_blank"
+                      rel="noopener"
+                      className={buttonVariants({
+                        variant: "outline",
+                        size: "sm",
+                      })}
+                    >
                       Live site ↗
-                    </a>
+                    </Link>
                   )}
                   {p.links?.client && (
-                    <a href={p.links.client} target="_blank" rel="noopener" className={buttonVariants({ variant: "outline", size: "sm" })}>
+                    <Link
+                      href={p.links.client}
+                      target="_blank"
+                      rel="noopener"
+                      className={buttonVariants({
+                        variant: "outline",
+                        size: "sm",
+                      })}
+                    >
                       Client repo ↗
-                    </a>
+                    </Link>
                   )}
                   {p.links?.server && (
-                    <a href={p.links.server} target="_blank" rel="noopener" className={buttonVariants({ variant: "outline", size: "sm" })}>
+                    <Link
+                      href={p.links.server}
+                      target="_blank"
+                      rel="noopener"
+                      className={buttonVariants({
+                        variant: "outline",
+                        size: "sm",
+                      })}
+                    >
                       Server repo ↗
-                    </a>
+                    </Link>
                   )}
                 </div>
               </div>

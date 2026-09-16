@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { CodeTypewriter } from "@/components/code-typewriter";
 import { TechMarquee } from "@/components/tech-marquee";
@@ -19,18 +20,24 @@ export function Hero() {
           <h1 className="font-display text-5xl md:text-6xl font-semibold leading-[1.05] tracking-tight">
             Al Amin
           </h1>
-          <p className="font-display text-xl md:text-2xl mt-3 text-muted">Software Developer, Dhaka</p>
+          <p className="font-display text-xl md:text-2xl mt-3 text-muted">
+            Software Developer, Dhaka
+          </p>
           <p className="mt-6 text-base md:text-lg text-muted leading-relaxed max-w-lg">
-            I build full-stack web products with React, Next.js and Node — from database schema to
-            the last pixel of the UI. Currently shipping features at MAR Group.
+            I build full-stack web products with React, Next.js and Node — from
+            database schema to the last pixel of the UI. Currently shipping
+            features at MAR Group.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
-            <a href="#projects" className={buttonVariants()}>
+            <Link href="#projects" className={buttonVariants()}>
               View my work
-            </a>
-            <a href="#contact" className={buttonVariants({ variant: "outline" })}>
+            </Link>
+            <Link
+              href="#contact"
+              className={buttonVariants({ variant: "outline" })}
+            >
               Say hello
-            </a>
+            </Link>
           </div>
           <div className="mt-12 flex flex-wrap gap-x-10 gap-y-4">
             {stats.map((s) => (
@@ -47,7 +54,9 @@ export function Hero() {
             <span className="w-[9px] h-[9px] rounded-full bg-[#5F5A54]" />
             <span className="w-[9px] h-[9px] rounded-full bg-[#5F5A54]" />
             <span className="w-[9px] h-[9px] rounded-full bg-[#5F5A54]" />
-            <span className="ml-3 font-mono text-xs text-faint">developer.ts</span>
+            <span className="ml-3 font-mono text-xs text-faint">
+              developer.ts
+            </span>
           </div>
           <CodeTypewriter />
         </div>
