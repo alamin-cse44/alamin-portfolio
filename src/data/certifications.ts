@@ -1,14 +1,14 @@
 export const certifications = [
   {
-    title: "Experience Certificate",
+    title: "Frontend Developer Experience Certificate",
     issuer: "IQC Security Consultancy",
-    note: "Add role, dates and a link or image of the certificate here once available.",
-    url: "#",
+    note: "Frontend Developer experience certificate for the Expert Hire project.",
+    image: "/images/certificates/frontend_dev_certificate.jpg",
   },
   {
-    title: "Web Development, Level 1 & 2",
+    title: "Web Development Certificate",
     issuer: "Programming Hero",
     note: "Certificate covering full-stack web development fundamentals through advanced topics.",
-    url: "#",
+    image: "/images/certificates/certificate.png",
   },
 ];
