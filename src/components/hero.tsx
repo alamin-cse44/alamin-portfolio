@@ -12,8 +12,8 @@ const stats = [
 export function Hero() {
   return (
     <section id="top" className="relative z-10 pt-40 pb-24 md:pt-48 md:pb-32">
-      <div className="mx-auto max-w-6xl px-6 md:px-12 grid md:grid-cols-2 gap-16 items-center">
-        <div>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-12 grid md:grid-cols-2 gap-10 md:gap-16 items-center min-w-0">
+        <div className="min-w-0">
           <p className="font-mono text-sm text-faint mb-5">
             <span className="text-accent2">~/portfolio</span> &gt; whoami
           </p>
@@ -49,7 +49,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="rounded-[14px] border border-border-soft bg-bg-soft shadow-[0_30px_80px_-30px_rgba(0,0,0,0.7)]">
+        <div className="min-w-0 overflow-hidden rounded-[14px] border border-border-soft bg-bg-soft shadow-[0_30px_80px_-30px_rgba(0,0,0,0.7)]">
           <div className="bg-surface-2 border-b border-border-soft rounded-t-[14px] flex items-center gap-2 px-4 py-3">
             <span className="w-[9px] h-[9px] rounded-full bg-[#5F5A54]" />
             <span className="w-[9px] h-[9px] rounded-full bg-[#5F5A54]" />
