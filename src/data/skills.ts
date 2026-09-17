@@ -8,7 +8,7 @@ export const skillGroups = [
     title: "Data & Auth",
     items: ["MongoDB", "Mongoose", "PostgreSQL", "Prisma", "Firebase", "OAuth", "JWT", "SSLCommerz"],
   },
-  { title: "Tooling", items: ["Git", "VS Code", "Figma", "Vercel"] },
+  { title: "Tooling", items: ["Git", "VS Code", "Cursor", "Antigravity", "Figma", "Vercel"] },
 ];
 
 export const coreStack = [
