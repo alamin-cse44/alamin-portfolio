@@ -5,7 +5,7 @@ import { TechMarquee } from "@/components/tech-marquee";
 
 const stats = [
   { value: "2.5+", label: "years, full-time" },
-  { value: "6", label: "live products shipped" },
+  { value: "10+", label: "live products shipped" },
   { value: "350+", label: "problems solved, Codeforces" },
 ];
 
