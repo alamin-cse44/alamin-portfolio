@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   title: "Al Amin — Software Developer",
   description:
     "Software Developer specializing in React, Next.js, Node.js and TypeScript. Portfolio of projects, experience and skills.",
+  icons: {
+    icon: "/logo.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +33,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
+    <html
+      lang="en"
+      className={`${display.variable} ${body.variable} ${mono.variable}`}
+    >
       <body className="font-body antialiased overflow-x-hidden">
         <div className="grid-backdrop" />
         <div className="glow" />
